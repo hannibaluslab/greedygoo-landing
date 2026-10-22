@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    {
+      "source": "/og",
+      "has": [{ "type": "header", "key": "user-agent", "value": "(?i).*(whatsapp|facebookexternalhit|facebot|linkedinbot|twitterbot).*" }],
+      "destination": "/og.jpg"
+    },
+    { "source": "/og", "destination": "/og.gif" }
+  ],
+  "headers": [
+    { "source": "/og", "headers": [{ "key": "Vary", "value": "User-Agent" }, { "key": "Cache-Control", "value": "public, max-age=3600" }] }
+  ]
+}
