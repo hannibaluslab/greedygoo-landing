@@ -636,6 +636,9 @@
   .tz-agents{left:42%;width:16%;top:90.6%;height:8.9%}
   .tz-board{left:59%;width:19.8%;top:92.3%;height:7.2%}
   .tz-send{left:78.8%;width:19%;top:92.3%;height:7.2%}
+  /* dark's tab bar sits higher: it keeps the iPhone's bottom inset under its labels */
+  .screen.is-dark .tz-invest,.screen.is-dark .tz-board,.screen.is-dark .tz-send{top:88.8%;height:7.5%}
+  .screen.is-dark .tz-agents{top:87.4%;height:8.2%}
   .tapzone{border-radius:14px;transition:background .2s ease}
   @media (hover:hover){.tapzone:hover{background:rgba(212,255,60,.16)}}
   .tapzone:focus-visible{outline:2px solid #9db32b;outline-offset:2px}
@@ -1420,6 +1423,18 @@
       const max = track.scrollWidth - track.clientWidth;
       track.scrollTo({ left: (max * i) / (n - 1), behavior: "smooth" });
     }));
+    // Every card's screen loads once the carousel comes near, not as each card is swiped in (iPhone Safari showed
+    // them blank). The carousel is display:none on desktop, so it never comes near there and nothing extra loads.
+    const shots = [...track.querySelectorAll("img")];
+    const near = new IntersectionObserver((es) => {
+      if (!es.some((e) => e.isIntersecting)) return;
+      near.disconnect();
+      shots.forEach((i) => {
+        i.loading = "eager";
+        new Image().src = i.src;
+      });
+    }, { rootMargin: "1200px 0px" });
+    near.observe(track);
   }
 
   // Mobile: sticky CTA bar appears after the hero, hides near the footer CTA
