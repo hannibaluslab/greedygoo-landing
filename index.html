@@ -656,6 +656,21 @@
   .stage-hint{bottom:-76px}
   @media (max-width:880px){.hero .stage{margin-bottom:86px}}
   footer .legal{flex:0 0 100%;margin-top:14px;text-transform:none;letter-spacing:.02em;line-height:1.6;font-size:10.5px}
+  /* alpha notice: every link into the app shows it first */
+  dialog.alpha{border:0;padding:0;background:none;width:calc(100% - 32px);max-width:400px;margin:auto;overflow:visible}
+  dialog.alpha::backdrop{background:rgba(14,13,11,.5);backdrop-filter:blur(4px)}
+  dialog.alpha[open]{animation:alpha-in .25s cubic-bezier(.2,.8,.2,1)}
+  @keyframes alpha-in{from{opacity:0;transform:translateY(10px) scale(.98)}}
+  html:has(dialog.alpha[open]){overflow:hidden}
+  .alpha-card{background:var(--bg-card);color:var(--ink);border:1px solid var(--line);border-radius:28px;padding:28px 26px 20px;box-shadow:0 44px 90px -30px rgba(14,13,11,.55)}
+  .alpha-tag{display:inline-block;background:var(--brand);color:var(--brand-ink);font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+  .alpha-card h3{font-size:24px;line-height:1.15;letter-spacing:-.03em;font-weight:800;margin-top:14px}
+  .alpha-card p{font-size:15px;line-height:1.6;color:var(--ink-mid);margin-top:10px}
+  .alpha-acts{display:flex;flex-direction:column;gap:6px;margin-top:22px}
+  .alpha-acts .btn{width:100%}
+  .alpha-no{height:44px;border:0;border-radius:999px;background:none;color:var(--ink-mute);font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer}
+  @media (hover:hover){.alpha-no:hover{color:var(--ink)}}
+  .alpha-acts :focus-visible{outline:2px solid #9db32b;outline-offset:2px}
   /* ── agents (dark band, NYM's .soon treatment) ── */
   .agents{background:var(--bg-dark);color:var(--ink-on-dark);position:relative;overflow:hidden;scroll-margin-top:24px}
   .agents .aura{position:absolute;inset:0;background:radial-gradient(ellipse 80% 45% at 25% 8%,rgba(212,255,60,.16) 0%,rgba(212,255,60,.05) 40%,transparent 75%),radial-gradient(ellipse 60% 40% at 90% 70%,rgba(212,255,60,.07),transparent 70%);pointer-events:none}
@@ -1223,6 +1238,19 @@
   <a href="https://app.greedygoo.com" target="_blank" rel="noopener">Let my money get greedy</a>
 </div>
 
+<!-- Alpha notice, shown before the app opens -->
+<dialog class="alpha" id="alpha" aria-labelledby="alpha-t" aria-describedby="alpha-d">
+  <div class="alpha-card">
+    <span class="alpha-tag">Alpha</span>
+    <h3 id="alpha-t">GreedyGoo is in alpha.</h3>
+    <p id="alpha-d">It runs on Base with real money, and it&rsquo;s still early. Keep the amounts small for now.</p>
+    <div class="alpha-acts">
+      <a class="btn btn-ink alpha-go" href="https://app.greedygoo.com" target="_blank" rel="noopener" autofocus>Got it, open the app &rarr;</a>
+      <button class="alpha-no" type="button">Not now</button>
+    </div>
+  </div>
+</dialog>
+
 <script>
   document.documentElement.classList.add("js");
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1567,6 +1595,28 @@
         } catch (e) {}
       }
     })();
+  })();
+</script>
+
+<script>
+  // Every link into the app opens the alpha notice first; its own button goes on to the app (a real click, so no
+  // pop-up blocker). Without <dialog> support the links open the app as before.
+  (() => {
+    const dlg = document.getElementById("alpha");
+    if (!dlg || typeof dlg.showModal !== "function") return;
+    const go = dlg.querySelector(".alpha-go");
+    document.querySelectorAll('a[href^="https://app.greedygoo.com"]').forEach((a) => {
+      if (a === go) return;
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        go.href = a.href;
+        dlg.showModal();
+      });
+    });
+    go.addEventListener("click", () => dlg.close());
+    dlg.querySelector(".alpha-no").addEventListener("click", () => dlg.close());
+    // A tap on the dim around the card closes it too
+    dlg.addEventListener("click", (e) => e.target === dlg && dlg.close());
   })();
 </script>
 
