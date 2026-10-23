@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#f4f2ec" />
 <title>GreedyGoo · Let your money get greedy</title>
-<meta name="description" content="GreedyGoo puts cash, stocks and credit in one account on Base. Your cash earns while it waits, you buy seven tokenized stocks from the same balance, your stocks back USDC credit, and Protect and Rebalance watch it for you. One Face ID per change, built on JAW.id." />
+<meta name="description" content="GreedyGoo puts cash, stocks and credit in one account on Base. Your cash earns until you spend it, you buy seven tokenized stocks from the same balance, your stocks back USDC credit, and Protect and Rebalance watch it for you. One signature per change, built on JAW.id." />
 <meta property="og:title" content="GreedyGoo · Let your money get greedy" />
-<meta property="og:description" content="Cash that earns, seven tokenized stocks and credit backed by them, in one account. One Face ID per change, built on JAW.id." />
+<meta property="og:description" content="Cash that earns, seven tokenized stocks and credit backed by them, in one account. One signature per change, built on JAW.id." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://greedygoo.com/" />
 <meta property="og:image" content="https://greedygoo.com/og" />
@@ -16,7 +16,7 @@
 <meta property="og:image:alt" content="GreedyGoo: let your money get greedy. Cash, stocks and credit in one account." />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="GreedyGoo · Let your money get greedy" />
-<meta name="twitter:description" content="Cash that earns, seven tokenized stocks and credit backed by them, in one account. One Face ID per change, built on JAW.id." />
+<meta name="twitter:description" content="Cash that earns, seven tokenized stocks and credit backed by them, in one account. One signature per change, built on JAW.id." />
 <meta name="twitter:image" content="https://greedygoo.com/og" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -67,6 +67,7 @@
   .mark img{width:56%;height:56%;object-fit:contain;filter:brightness(0) invert(96%) sepia(48%) saturate(2400%) hue-rotate(15deg) brightness(105%) contrast(105%) drop-shadow(0 3px 10px rgba(212,255,60,.55))}
   .nav-name{font-weight:800;font-size:16px;letter-spacing:-.02em}
   .nav-by{font-family:var(--mono);font-size:10.5px;color:var(--ink-mute);letter-spacing:.1em}
+  .nav-id{display:flex;flex-direction:column;line-height:1.2;gap:1px}
   .nav-links{margin-left:auto;display:flex;gap:26px;font-size:13.5px;font-weight:600;color:var(--ink-mid)}
   .nav-links a:hover{color:var(--ink)}
   .nav-cta{height:38px;padding:0 18px;font-size:13px;margin-left:8px}
@@ -700,7 +701,8 @@
   .batch li{counter-increment:bc;display:flex;gap:9px;align-items:baseline;font-size:13.5px;line-height:1.45;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 10px}
   .batch li::before{content:counter(bc);font:700 10.5px/1 var(--mono);color:var(--ink-mute);flex:none}
   .b-then{font-size:12.5px;color:var(--ink-mid);line-height:1.5;margin-top:auto}
-  .b-foot{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-on-dark-mute);text-transform:uppercase}
+  .b-foot{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ink-on-dark);text-transform:uppercase;background:rgba(212,255,60,.08);border:1px solid rgba(212,255,60,.4);border-radius:14px;padding:11px 16px;line-height:1.4}
+  .b-foot::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand);box-shadow:0 0 10px rgba(212,255,60,.75);flex:none}
   .round{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
   .round li{position:relative;border-top:2px solid rgba(212,255,60,.5);padding:18px 4px 0;display:flex;flex-direction:column;gap:8px}
   .round li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 5px rgba(212,255,60,.18)}
@@ -716,7 +718,7 @@
 <nav>
   <div class="wrap nav-in">
     <div class="mark goose"><img src="goose-mark.svg" alt="GreedyGoo" /></div>
-    <span class="nav-name">GreedyGoo</span>
+    <span class="nav-id"><span class="nav-name">GreedyGoo</span><span class="nav-by">Powered by JAW.id</span></span>
     <div class="nav-links">
       <a href="#friends">Features</a>
       <a href="#agents">Agents</a>
@@ -732,9 +734,9 @@
   <div class="glow"></div>
   <div class="wrap hero-in">
     <div>
-      <div class="eyebrow lime rv">Fully powered by JAW.id</div>
+      <div class="eyebrow lime rv">Powered by JAW.id</div>
       <h1 class="rv d1">Let your money<br/>get <span class="hl">greedy.</span></h1>
-      <p class="sub rv d2">Cash, stocks and credit in one account. <span class="dsk-only">Your cash <b>earns while it waits</b>. Buy Apple, NVIDIA and Tesla from the same balance. Get credit <b>backed by the stocks you hold</b>, without selling them. Protect and Rebalance watch it all for you. One Face ID per change, and only you control&nbsp;it.</span><span class="mob-only">Your cash earns while it waits, you buy Apple, NVIDIA and Tesla from the same balance, and your stocks back credit without being sold. Protect and Rebalance watch it all. One Face ID per change, and only you control&nbsp;it.</span></p>
+      <p class="sub rv d2">Your cash <b>earns</b>, your stocks <b>unlock credit</b>, and agents keep watch. All with just your face or fingerprint, and you&rsquo;re the only one in&nbsp;control.</p>
       <div class="hero-ctas rv d3">
         <a class="btn btn-ink" href="https://app.greedygoo.com" target="_blank" rel="noopener">Let my money get greedy →</a>
         <a class="btn btn-ghost" href="#friends">See it work</a>
@@ -742,8 +744,8 @@
       <div class="hero-note rv d4"><span class="live-dot"></span> Live on Base</div>
     </div>
     <div class="stage rv d2" id="stage">
-      <div class="fpill a" data-px="14"><span class="k">CASH</span> earning <b class="lime">· 4.0%</b></div>
-      <div class="fpill b" data-px="-18"><span class="k">CREDIT BUY</span> NVIDIA · <b class="lime">1 Face ID</b></div>
+      <div class="fpill a" data-px="14"><span class="k">CASH</span> earning <b class="lime">· <span data-apy>4.0</span>%</b></div>
+      <div class="fpill b" data-px="-18"><span class="k">CREDIT BUY</span> NVIDIA · <b class="lime">1 signature</b></div>
       <div class="fpill c" data-px="10"><span class="k">FEE</span> paid in USDC</div>
       <div class="phone">
         <div class="screen" id="hero-screen">
@@ -782,8 +784,8 @@
 
 <div class="marquee" aria-hidden="true">
   <div class="marq-track">
-    <span><b>Face ID</b> sign-up</span><i>✦</i><span><b>7</b> tokenized stocks</span><i>✦</i><span><b>Cash</b> that earns</span><i>✦</i><span><b>Credit</b> backed by stocks</span><i>✦</i><span><b>One</b> Face ID per change</span><i>✦</i><span><b>Protect</b></span><i>✦</i><span><b>Rebalance</b></span><i>✦</i><span><b>Fees</b> in USDC</span>
-    <span><b>Face ID</b> sign-up</span><i>✦</i><span><b>7</b> tokenized stocks</span><i>✦</i><span><b>Cash</b> that earns</span><i>✦</i><span><b>Credit</b> backed by stocks</span><i>✦</i><span><b>One</b> Face ID per change</span><i>✦</i><span><b>Protect</b></span><i>✦</i><span><b>Rebalance</b></span><i>✦</i><span><b>Fees</b> in USDC</span>
+    <span><b>Biometric</b> sign-up</span><i>✦</i><span><b>7</b> tokenized stocks</span><i>✦</i><span><b>Cash</b> that earns</span><i>✦</i><span><b>Credit</b> backed by stocks</span><i>✦</i><span><b>One</b> signature per change</span><i>✦</i><span><b>Protect</b></span><i>✦</i><span><b>Rebalance</b></span><i>✦</i><span><b>Fees</b> in USDC</span>
+    <span><b>Biometric</b> sign-up</span><i>✦</i><span><b>7</b> tokenized stocks</span><i>✦</i><span><b>Cash</b> that earns</span><i>✦</i><span><b>Credit</b> backed by stocks</span><i>✦</i><span><b>One</b> signature per change</span><i>✦</i><span><b>Protect</b></span><i>✦</i><span><b>Rebalance</b></span><i>✦</i><span><b>Fees</b> in USDC</span>
   </div>
 </div>
 
@@ -793,7 +795,7 @@
       <div class="sb-aura"></div>
       <div class="sb">
         <div class="sb-viz"><span class="facescan"><svg viewBox="0 0 48 48"><path class="fr" d="M15,4 H11 A7,7 0 0 0 4,11 V15 M33,4 h4 A7,7 0 0 1 44,11 V15 M15,44 H11 A7,7 0 0 1 4,37 V33 M33,44 h4 A7,7 0 0 0 44,37 V33"/><path class="ff" d="M17.5,18.5 v4 M30.5,18.5 v4 M17,30 q7,5.5 14,0"/><rect class="fscan" x="8" y="10" width="32" height="2.4" rx="1.2"/></svg></span></div>
-        <div class="sb-num"><span class="rollwrap"><span class="roll">1</span></span><em>Face ID</em></div>
+        <div class="sb-num"><span class="rollwrap"><span class="roll">1</span></span><em>signature</em></div>
         <div class="sb-l">Per change, whatever it moves</div>
       </div>
       <div class="sb">
@@ -803,7 +805,7 @@
       </div>
       <div class="sb">
         <div class="sb-viz"><span class="meterm"><i></i></span></div>
-        <div class="sb-num"><span class="rollwrap"><span class="roll">4.0</span></span><em>%</em></div>
+        <div class="sb-num"><span class="rollwrap"><span class="roll" data-apy>4.0</span></span><em>%</em></div>
         <div class="sb-l">What cash earns today, variable</div>
       </div>
       <div class="sb">
@@ -842,34 +844,34 @@
       </div>
       <div class="steps-col">
         <div class="step on" data-step="0">
-          <div class="num">01 · ONE FACE ID</div>
-          <h3>Sign up with your face.</h3>
-          <p>Face ID creates your account in seconds. There&rsquo;s no seed phrase and no app to install, and the passkey behind it never leaves your phone.</p>
+          <div class="num">01 · BIOMETRIC SIGN-UP</div>
+          <h3>Sign up in seconds.</h3>
+          <p>Create your account with a biometric scan. There&rsquo;s no seed phrase and no app to install.</p>
         </div>
         <div class="step" data-step="1">
           <div class="num">02 · TOP UP</div>
-          <h3>Top up with the dollars you hold.</h3>
+          <h3>Top up with the coin you hold.</h3>
           <p>Send USDC, USDT, USDe, USDS, DAI or EURC on Base to your account. They arrive as cash, ready to earn, spend or invest.</p>
         </div>
         <div class="step" data-step="2">
           <div class="num">03 · CASH THAT EARNS</div>
-          <h3>Your cash earns while it waits.</h3>
-          <p>What you don&rsquo;t spend sits in savings and earns about 4% a year today, variable. It stays one balance, so a buy takes from it in the same signature. A $0.50 fuel tank pays the network fees.</p>
+          <h3>Earn on the cash you keep.</h3>
+          <p>It grows in savings by about <span data-apy>4.0</span>% a year, at a variable rate. You still see one balance, and you can spend or invest from it anytime without withdrawing first.</p>
         </div>
         <div class="step" data-step="3">
           <div class="num">04 · SEVEN STOCKS</div>
-          <h3>Apple to Tesla, from one balance.</h3>
-          <p>Buy and sell the seven Coinbase tokenized stocks: Apple, Amazon, Alphabet, Meta, Microsoft, NVIDIA and Tesla. They track the share price, but they&rsquo;re not company shares.</p>
+          <h3>Buy stocks, Apple to Tesla.</h3>
+          <p>Trade the seven Coinbase tokenized stocks: Apple, Amazon, Alphabet, Meta, Microsoft, NVIDIA and Tesla. They track the share price, but they&rsquo;re not company shares.</p>
         </div>
         <div class="step" data-step="4">
           <div class="num">05 · BUY IN SECONDS</div>
-          <h3>Type an amount and confirm with Face ID.</h3>
+          <h3>Type an amount and confirm.</h3>
           <p>You see what you get before you sign. The buy arrives in seconds, and you sell it back the same way.</p>
         </div>
         <div class="step" data-step="5">
           <div class="num">06 · CREDIT BUY</div>
           <h3>Buy more, backed by what you hold.</h3>
-          <p>Your stocks can back USDC credit, so you buy more without selling anything. Pick which stocks back the buy and see the limit before you sign. Only what the buy needs goes in.</p>
+          <p>Your stocks can back USDC credit, so you buy more without having to sell anything. Pick which stocks back the buy and see the limit before you sign. Only what the buy needs is used as backing.</p>
         </div>
         <div class="step" data-step="6">
           <div class="num">07 · REPAY &amp; FREE UP</div>
@@ -878,23 +880,23 @@
         </div>
         <div class="step" data-step="7">
           <div class="num">08 · CREDIT HEALTH</div>
-          <h3>Know how safe you are, in one number.</h3>
+          <h3>Know how safe your credit is.</h3>
           <p>Your credit health shows how far your stocks can fall before any are sold. It reads Safe from 1.50, Watch down to 1.10 and Act below that.</p>
         </div>
         <div class="step" data-step="8">
           <div class="num">09 · PROTECT</div>
-          <h3>Protect steps in before the line.</h3>
+          <h3>Let Protect guard your credit.</h3>
           <p>If your credit health falls under 1.03, Protect repays from your cash and brings it back to 1.12. If cash isn&rsquo;t enough, it sells only stock that backs your credit, and never on a weekend.</p>
         </div>
         <div class="step" data-step="9">
           <div class="num">10 · REBALANCE</div>
-          <h3>Your mix, kept on target.</h3>
-          <p>Set the mix you want. Rebalance checks once a market day, after the US open, and trades your stocks back toward it. It never spends your cash, and never touches stock that backs your credit.</p>
+          <h3>Use Rebalance to stay on target.</h3>
+          <p>Pick your mix, and Rebalance trades back toward it every market day. It never touches your cash or the stock backing your credit.</p>
         </div>
         <div class="step" data-step="10">
           <div class="num">11 · LEADERBOARD</div>
-          <h3>See who&rsquo;s the greediest.</h3>
-          <p>Everyone joins with their first move. The board ranks return since joining, on your own money only, so winning with credit lifts you up the ranks.</p>
+          <h3>Keep track of the greediest.</h3>
+          <p>Everyone joins with their first move. The board ranks your return on your own money since you joined, so winning with credit moves you up.</p>
         </div>
       </div>
     </div>
@@ -904,39 +906,39 @@
       <div class="showm-track" id="showm-track">
         <div class="slide">
           <div class="frame"><img class="cpos" src="shots/m/welcome.png" alt="" loading="lazy" /></div>
-          <div class="num">01 · ONE FACE ID</div>
-          <h3>Sign up with your face.</h3>
-          <p>Face ID creates your account in seconds, with no seed phrase and no app to install.</p>
+          <div class="num">01 · BIOMETRIC SIGN-UP</div>
+          <h3>Sign up in seconds.</h3>
+          <p>Create your account with a biometric scan. No seed phrase, no app to install.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/topup.png" alt="" loading="lazy" /></div>
           <div class="num">02 · TOP UP</div>
-          <h3>Top up with the dollars you hold.</h3>
+          <h3>Top up with the coin you hold.</h3>
           <p>Send USDC, USDT, USDe, USDS, DAI or EURC on Base. They arrive as cash.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/cash.png" alt="" loading="lazy" /></div>
           <div class="num">03 · CASH THAT EARNS</div>
-          <h3>Your cash earns while it waits.</h3>
-          <p>Your cash earns about 4% a year today, variable, and stays one balance you can spend.</p>
+          <h3>Earn on the cash you keep.</h3>
+          <p>It grows by about <span data-apy>4.0</span>% a year at a variable rate, and stays one balance you can spend anytime.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/market.png" alt="" loading="lazy" /></div>
           <div class="num">04 · SEVEN STOCKS</div>
-          <h3>Apple to Tesla, from one balance.</h3>
-          <p>Buy and sell seven tokenized stocks. They track the share price, but they&rsquo;re not company shares.</p>
+          <h3>Buy stocks, Apple to Tesla.</h3>
+          <p>Trade seven tokenized stocks. They track the share price, but they&rsquo;re not company shares.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/buy-apple.png" alt="" loading="lazy" /></div>
           <div class="num">05 · BUY IN SECONDS</div>
-          <h3>Type an amount and confirm with Face ID.</h3>
+          <h3>Type an amount and confirm.</h3>
           <p>See what you get before you sign. The buy arrives in seconds.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/creditbuy.png" alt="" loading="lazy" /></div>
           <div class="num">06 · CREDIT BUY</div>
           <h3>Buy more, backed by what you hold.</h3>
-          <p>Your stocks back USDC credit, so you buy more without selling anything.</p>
+          <p>Your stocks back USDC credit, so you buy more without having to sell anything.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/repay.png" alt="" loading="lazy" /></div>
@@ -947,26 +949,26 @@
         <div class="slide">
           <div class="frame"><img src="shots/m/credit.png" alt="" loading="lazy" /></div>
           <div class="num">08 · CREDIT HEALTH</div>
-          <h3>Know how safe you are, in one number.</h3>
+          <h3>Know how safe your credit is.</h3>
           <p>See how far your stocks can fall before any are sold, from Safe to Watch to Act.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/protect.png" alt="" loading="lazy" /></div>
           <div class="num">09 · PROTECT</div>
-          <h3>Protect steps in before the line.</h3>
+          <h3>Let Protect guard your credit.</h3>
           <p>Under 1.03, it repays from your cash first, and sells only stock that backs your credit.</p>
         </div>
         <div class="slide">
           <div class="frame"><img src="shots/m/rebalance.png" alt="" loading="lazy" /></div>
           <div class="num">10 · REBALANCE</div>
-          <h3>Your mix, kept on target.</h3>
-          <p>Rebalance checks once a market day and trades your stocks back toward your mix.</p>
+          <h3>Use Rebalance to stay on target.</h3>
+          <p>Pick your mix, and it trades back toward it every market day.</p>
         </div>
         <div class="slide">
           <div class="frame"><img class="toppos" src="shots/m/leaderboard.png" alt="" loading="lazy" /></div>
           <div class="num">11 · LEADERBOARD</div>
-          <h3>See who&rsquo;s the greediest.</h3>
-          <p>The board ranks return since joining, on your own money only, so winning with credit lifts your rank.</p>
+          <h3>Keep track of the greediest.</h3>
+          <p>The board ranks your return on your own money since you joined, so winning with credit moves you up.</p>
         </div>
       </div>
       <div class="showm-dots" id="showm-dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -979,38 +981,38 @@
   <div class="wrap ag-in">
     <div class="ag-head rv">
       <div class="eyebrow">Agents · on-chain</div>
-      <h2>Agents that work for you,<br/>only on what you <span class="hl">signed</span>.</h2>
-      <p class="lead">Four agents look after your money while you&rsquo;re out of the app. They run on-chain in our contract, GooseExecutor, and each one acts only under a permission you grant with JAW.id. The permission lists the exact moves the agent may make, and it lasts a year.</p>
+      <h2>The agents work for you,<br/>only on what you <span class="hl">signed</span>.</h2>
+      <p class="lead">Four agents look after your money when you&rsquo;re not in the app. Each one runs on-chain through our GooseExecutor contract and can only do what your JAW.id permission allows, which automatically expires after a year.</p>
     </div>
 
     <div class="ag-cards">
       <div class="ag-card rv">
-        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="ag-tag">Agents tab</span></div>
+        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 9.5C8 19.3 5 15.4 5 11V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="ag-tag">You pick</span></div>
         <h3>Protect</h3>
-        <p>If your credit health falls under 1.03, it repays from your cash and brings it back to 1.12. If cash isn&rsquo;t enough, it sells only stock that backs your credit.</p>
+        <p>Steps in when your credit gets risky, repaying from your cash first.</p>
       </div>
       <div class="ag-card rv d1">
-        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0113.7-5.6L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 01-13.7 5.6L4 15"/><path d="M4 20v-5h5"/></svg></span><span class="ag-tag">Agents tab</span></div>
+        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0113.7-5.6L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 01-13.7 5.6L4 15"/><path d="M4 20v-5h5"/></svg></span><span class="ag-tag">You pick</span></div>
         <h3>Rebalance</h3>
-        <p>Checks once a market day, after the US open, and trades your stocks back toward the mix you set. It never touches stock that backs your credit.</p>
+        <p>Keeps your stock mix on target, checking once every market day.</p>
       </div>
       <div class="ag-card rv d2">
-        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg></span><span class="ag-tag dim">In the background</span></div>
+        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg></span><span class="ag-tag dim">Picked for you</span></div>
         <h3>Save</h3>
         <p>Moves new cash into savings so it starts earning, with nothing for you to do.</p>
       </div>
       <div class="ag-card rv d3">
-        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><circle cx="16" cy="12" r="4"/></svg></span><span class="ag-tag dim">In the background</span></div>
+        <div class="ag-top"><span class="ag-ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><circle cx="16" cy="12" r="4"/></svg></span><span class="ag-tag dim">Picked for you</span></div>
         <h3>Entry</h3>
-        <p>Turns other dollar coins you receive, like USDT or USDe, into cash, so everything lands in one balance.</p>
+        <p>Turns other stablecoins you receive into cash, all in one balance.</p>
       </div>
     </div>
-    <div class="ag-soon rv"><span class="k">Coming soon</span><span>DCA</span><span>Auto top up</span><span>JAW MCP</span></div>
+    <div class="ag-soon rv"><span class="k">Coming soon</span><span>DCA</span><span>Auto Top-Up</span><span>JAW MCP</span></div>
 
     <div class="ag-block rv">
       <div class="ag-bh">
         <div class="eyebrow">JAW.id permissions</div>
-        <h3>A permission, read out loud.</h3>
+        <h3>See exactly what each agent can do.</h3>
         <p>Each agent gets its own permission in JAW&rsquo;s permission manager. It names one spender and the exact functions it may call. Pick an agent to read its permission.</p>
       </div>
       <div class="perm-wrap">
@@ -1029,18 +1031,18 @@
               <ul class="pc-calls" data-p="sell"><li><b>Aave credit</b> · withdraw the stock that backs it</li><li><b>Each stock that backs credit</b> · approve</li><li><b>Aerodrome</b> · swap</li><li><b>USDC</b> · approve</li><li><b>Aave credit</b> · repay</li></ul>
               <ul class="pc-calls" data-p="rebalance"><li><b>Each stock in your mix</b> · approve</li><li><b>USDC</b> · approve</li><li><b>Aerodrome</b> · swap</li><li class="opt"><b>Aave savings</b> · withdraw, only with Top-ups on</li></ul>
               <ul class="pc-calls" data-p="save"><li><b>USDC</b> · approve</li><li><b>Aave savings</b> · supply</li></ul>
-              <ul class="pc-calls" data-p="entry"><li><b>Each dollar coin</b> · approve</li><li><b>Aerodrome, Uniswap or Spark</b> · swap</li></ul>
+              <ul class="pc-calls" data-p="entry"><li><b>Each stablecoin</b> · approve</li><li><b>Aerodrome, Uniswap or Spark</b> · swap</li></ul>
             </div>
             <div class="pc-row"><span class="pc-k">Lasts</span><span class="pc-v">a year from the day you turn it on</span></div>
             <div class="pc-row"><span class="pc-k">Never</span><span class="pc-v">add owners, change your account, or call anything not listed</span></div>
-            <div class="pc-row"><span class="pc-k">Off switch</span><span class="pc-v lime">revoke it in one Face ID</span></div>
+            <div class="pc-row"><span class="pc-k">Off switch</span><span class="pc-v lime">revoke it in one signature</span></div>
           </div>
         </div>
         <div class="checks">
           <div class="ck-title">Before any call, JAW&rsquo;s manager checks</div>
           <ol class="ck">
             <li><b>The right spender.</b> Only GooseExecutor can use it.</li>
-            <li><b>Still on.</b> It&rsquo;s approved and not revoked.</li>
+            <li><b>Still active.</b> You haven&rsquo;t turned it off.</li>
             <li><b>Inside its dates.</b> It has started and hasn&rsquo;t ended.</li>
             <li><b>Every call is on the list.</b> One call off the list and nothing runs.</li>
           </ol>
@@ -1055,44 +1057,14 @@
 
     <div class="ag-block rv">
       <div class="ag-bh">
-        <div class="eyebrow">JAW.id batch calls</div>
-        <h3>One Face ID, one batch.</h3>
-        <p>A JAW account runs many calls as one batch, all or nothing. GreedyGoo puts each change in a single batch, so one Face ID does the whole job. JAW&rsquo;s sheet shows every call before you sign.</p>
-      </div>
-      <div class="batches">
-        <div class="batch">
-          <div class="b-top"><span>Turn on Protect</span><b>1 Face ID</b></div>
-          <ol><li>Take back the permission it replaces, if any</li><li>Approve Protect&rsquo;s permission in JAW&rsquo;s manager</li><li>Save its settings</li><li>Register the permission with GooseExecutor</li></ol>
-        </div>
-        <div class="batch">
-          <div class="b-top"><span>Start earning</span><b>1 Face ID</b></div>
-          <ol><li>Move your cash into savings</li><li>Approve Save&rsquo;s permission in JAW&rsquo;s manager</li><li>Register it with GooseExecutor</li></ol>
-          <div class="b-then">Then new cash goes into savings on its own.</div>
-        </div>
-        <div class="batch">
-          <div class="b-top"><span>Turn into cash</span><b>1 Face ID</b></div>
-          <ol><li>Convert the coin you received into cash</li><li>Approve Entry&rsquo;s permission in JAW&rsquo;s manager</li><li>Register it with GooseExecutor</li></ol>
-          <div class="b-then">Then the next ones convert on their own.</div>
-        </div>
-        <div class="batch">
-          <div class="b-top"><span>Turn an agent off</span><b>1 Face ID</b></div>
-          <ol><li>Revoke its permission in JAW&rsquo;s manager</li><li>Clear its settings</li></ol>
-          <div class="b-then">Revoked for good. Turning it on again signs a new one.</div>
-        </div>
-      </div>
-      <div class="b-foot">If one call fails, the whole batch reverts and nothing moves.</div>
-    </div>
-
-    <div class="ag-block rv">
-      <div class="ag-bh">
         <div class="eyebrow">Every 10 minutes</div>
-        <h3>One round, step by step.</h3>
+        <h3>See how each round runs.</h3>
       </div>
       <ol class="round">
-        <li><span class="r-n">01</span><b>The runner wakes GooseExecutor.</b><span>It holds no money and no permission. It can only ask for a round.</span></li>
-        <li><span class="r-n">02</span><b>GooseExecutor plans each account.</b><span>It runs Protect first, then Protect · sell, Rebalance, Entry and Save. One account failing never stops the others.</span></li>
-        <li><span class="r-n">03</span><b>JAW&rsquo;s manager checks, then runs.</b><span>Each move goes through your permission and runs as one batch from your account.</span></li>
-        <li><span class="r-n">04</span><b>GooseExecutor checks after.</b><span>Money stays in your own pockets, or the move is undone.</span></li>
+        <li><span class="r-n">01</span><b>GooseExecutor wakes up.</b><span>A runner with no money or permission wakes it up.</span></li>
+        <li><span class="r-n">02</span><b>Each account gets a plan.</b><span>Protect always goes first, and one account failing never stops the others.</span></li>
+        <li><span class="r-n">03</span><b>JAW checks, then runs.</b><span>Only moves your permission allows get through.</span></li>
+        <li><span class="r-n">04</span><b>GooseExecutor rechecks.</b><span>Money stays in your own pockets, or the move is undone.</span></li>
       </ol>
     </div>
   </div>
@@ -1101,7 +1073,9 @@
 <section class="block" id="solid" style="scroll-margin-top:24px">
   <div class="wrap">
     <div class="sec-head oneline rv">
-      <h2>Careful where it counts.</h2>
+      <div class="eyebrow">How it works</div>
+      <h2>Your money stays safe.</h2>
+      <p>Here&rsquo;s what JAW.id does behind the scenes to keep it that way.</p>
     </div>
     <div class="bento">
       <div class="cell c6 rv">
@@ -1112,8 +1086,8 @@
 <circle class="limef" cx="38" cy="12" r="2.4"/>
 <path class="lime route" d="M15 31 C 22 24, 26 24, 33 17"/>
 </svg></div>
-        <h3>Checked and simulated before you sign.</h3>
-        <p>Every move is built from fresh reads, checked against the list of what the app may sign, and simulated on Base. Then JAW&rsquo;s sheet shows it to you.</p>
+        <h3>Every move is tested first.</h3>
+        <p>Each move is built from live data, checked against an allowlist and simulated on Base before JAW shows it to you.</p>
         <div class="chainrow"><span>FRESH READS</span><span>ALLOWLIST</span><span>SIMULATED</span><span>ONE SIGNATURE</span><span>BASE</span></div>
       </div>
       <div class="cell c4 rv d1">
@@ -1122,41 +1096,11 @@
 <rect class="st" x="16" y="12" width="22" height="16" rx="4" fill="#fff"/>
 <path class="lime" d="M21 20l2.4 2.4L28 17"/>
 </svg></div>
-        <h3>One Face ID, any number of moves.</h3>
-        <p>A buy that takes from savings, a repay that frees up stocks, an agent switched on with its permission. Each change is one batch and one signature.</p>
+        <h3>One signature covers it all.</h3>
+        <p>Buying, repaying or switching on an agent each runs as one batch. If any step fails, nothing moves.</p>
         <div class="decoded">
-          <div class="l"><span>Repay + free up 2 stocks</span><b>1 Face ID</b></div>
+          <div class="l"><span>Repay + free up 2 stocks</span><b>1 signature</b></div>
           <div class="l"><span>Network fee</span><b class="pos">one, not three</b></div>
-        </div>
-      </div>
-      <div class="cell c4 rv d2">
-        <div class="cico" aria-hidden="true"><svg viewBox="0 0 48 48">
-<circle class="st" cx="24" cy="26" r="12" fill="#fff"/>
-<circle class="lime" cx="12" cy="14" r="5" fill="none" stroke-dasharray="2 3"/>
-<circle class="lime" cx="36" cy="14" r="5" fill="none" stroke-dasharray="2 3"/>
-<path class="lime" d="M15 17l6 6M33 17l-6 6" opacity=".6"/>
-<text x="24" y="30" font-family="Geist Mono,monospace" font-size="13" font-weight="700" fill="#0e0d0b" text-anchor="middle">$</text>
-</svg></div>
-        <h3>Savings and wallet, one number.</h3>
-        <p>Your cash sits in savings and earns, but you only ever see one number. Buys and repays take from it inside the same signature.</p>
-        <div class="decoded">
-          <div class="l"><span>In savings</span><b>$1,582.50</b></div>
-          <div class="l"><span>Fuel tank</span><b>$0.50</b></div>
-          <div class="l"><span>Your cash</span><b class="pos">$1,583.00</b></div>
-        </div>
-      </div>
-      <div class="cell c4 rv">
-        <div class="cico" aria-hidden="true"><svg viewBox="0 0 48 48">
-<path class="st" d="M8 38 A17 17 0 0 1 40 38" fill="#fff"/>
-<path class="st" d="M11 32.5l2.6 1.6M37 32.5l-2.6 1.6M24 26v3.4" opacity=".5"/>
-<line class="lime needle" x1="24" y1="36" x2="34.5" y2="28"/>
-<circle class="limef" cx="24" cy="36" r="3"/>
-</svg></div>
-        <h3>Credit you can read.</h3>
-        <p>Health is one number that shows how far your stocks can fall before any are sold, so there are no ratios to work out.</p>
-        <div class="decoded">
-          <div class="l"><span>Credit health</span><b>2.04 · Safe</b></div>
-          <div class="l"><span>Stocks can fall</span><b class="pos" style="white-space:nowrap">50% first</b></div>
         </div>
       </div>
       <div class="cell c6 rv">
@@ -1167,26 +1111,12 @@
 <circle class="limef" cx="31" cy="27" r="3.4"/>
 <path d="M29.5 27l1.2 1.2 2-2.2" fill="none" stroke="#0e0d0b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></div>
-        <h3>Activity that reads like English.</h3>
+        <h3>Your activity reads like English.</h3>
         <p>Every move, yours or an agent&rsquo;s, decodes into what actually happened.</p>
         <div class="decoded">
           <div class="l"><span>Bought Apple · $250.00</span><b class="pos">+0.7301 AAPL</b></div>
           <div class="l"><span>Rebalance · mix on target</span><b>Apple 46%</b></div>
           <div class="l"><span>Protect is on</span><b>repays from cash</b></div>
-        </div>
-      </div>
-      <div class="cell c4 rv d1">
-        <div class="cico" aria-hidden="true"><svg viewBox="0 0 48 48">
-<path class="st" d="M6 24 C 12 14, 36 14, 42 24 C 36 34, 12 34, 6 24 Z" fill="#fff"/>
-<circle class="lime" cx="24" cy="24" r="6" fill="none"/>
-<circle class="limef" cx="24" cy="24" r="2.4"/>
-</svg></div>
-        <h3>Nothing to sign blind.</h3>
-        <p>JAW&rsquo;s sheet shows the whole batch, amounts and fee, before Face ID appears. It is the confirmation, with no screen of ours in between.</p>
-        <div class="decoded">
-          <div class="l"><span>Buying</span><b>$250.00 · Apple</b></div>
-          <div class="l"><span>Network fee</span><b>paid in USDC</b></div>
-          <div class="l"><span>Then</span><b class="pos">Face ID</b></div>
         </div>
       </div>
       <div class="cell c4 rv d2">
@@ -1195,8 +1125,8 @@
 <circle class="limef" cx="12" cy="24" r="4.4"/>
 <text x="18.5" y="27.6" font-family="Geist Mono,ui-monospace,monospace" font-size="9.5" font-weight="700" letter-spacing="0" fill="#0e0d0b">USDC</text>
 </svg></div>
-        <h3>Fees in USDC, never ETH.</h3>
-        <p>Network fees are paid in USDC. $0.50 of your cash stays in the wallet as a fuel tank, so you never need ETH to move your money.</p>
+        <h3>You never need ETH for fees.</h3>
+        <p>Fees come out of a $0.50 USDC fuel tank in your wallet.</p>
         <div class="decoded">
           <div class="l"><span>Fuel tank</span><b>$0.50 · USDC</b></div>
           <div class="l"><span>ETH needed</span><b class="pos">none</b></div>
@@ -1210,8 +1140,8 @@
 <path class="st" d="M24 24.6V30"/>
 <circle class="limef" cx="24" cy="21" r="1.4"/>
 </svg></div>
-        <h3>Keys that never leave your pocket.</h3>
-        <p>Your passkey signer lives in your phone&rsquo;s secure enclave, hardware even the OS can&rsquo;t read. You hold your own keys, with no seed phrase.</p>
+        <h3>Your keys never leave your phone.</h3>
+        <p>Your passkey lives in your phone&rsquo;s secure enclave, out of reach even of the OS. No seed phrase to lose.</p>
         <div class="chainrow two"><span>BIOMETRICS</span><span>SECURE ENCLAVE</span><span>E2E CLOUD BACKUP</span><span>ZERO SEED WORDS</span></div>
       </div>
       <div class="cell c4 rv d2">
@@ -1220,38 +1150,11 @@
 <rect class="st" x="14" y="14" width="20" height="20" rx="5" fill="#fff"/>
 <circle class="limef" cx="24" cy="24" r="3.2"/>
 </svg></div>
-        <h3>No server, no database.</h3>
+        <h3>Nothing depends on our servers.</h3>
         <p>The app reads everything straight from Base, and its only server code is a stateless price feed.</p>
         <div class="decoded">
           <div class="l"><span>Your money</span><b>on Base</b></div>
           <div class="l"><span>GreedyGoo servers</span><b class="pos">not required</b></div>
-        </div>
-      </div>
-      <div class="cell c4 rv">
-        <div class="cico" aria-hidden="true"><svg viewBox="0 0 48 48">
-<rect class="st" x="6" y="26" width="36" height="10" rx="5" fill="#fff"/>
-<rect class="limef" x="9" y="29" width="13" height="4" rx="2"/>
-<circle class="st" cx="34" cy="14" r="5" fill="#fff"/>
-<path class="lime" d="M34 19v7"/>
-</svg></div>
-        <h3>Agents that stay in your pockets.</h3>
-        <p>Protect and Rebalance act on-chain under permissions you sign. Every move is checked after it runs, and if money would leave your own pockets, it&rsquo;s undone.</p>
-        <div class="decoded">
-          <div class="l"><span>Protect · Rebalance</span><b>your pockets only</b></div>
-          <div class="l"><span>Turn off</span><b class="pos">from its own sheet</b></div>
-        </div>
-      </div>
-      <div class="cell c4 rv d1">
-        <div class="cico" aria-hidden="true"><svg viewBox="0 0 48 48">
-<rect class="st" x="6" y="15" width="36" height="18" rx="9" fill="#fff"/>
-<circle class="limef" cx="33" cy="24" r="6"/>
-<path class="st" d="M13 24h9" opacity=".5"/>
-</svg></div>
-        <h3>One switch per agent.</h3>
-        <p>Each agent has its own permission, good for a year, and its own off switch. Turning one off revokes its permission in the same Face ID.</p>
-        <div class="decoded">
-          <div class="l"><span>Protect · repay from cash</span><b>for a year</b></div>
-          <div class="l"><span>Turn off</span><b class="pos">revokes it</b></div>
         </div>
       </div>
     </div>
@@ -1264,8 +1167,8 @@
       <div class="aura"></div>
       <div class="jh-left">
         <div class="eyebrow">Under the hood</div>
-        <h2>Built end to end on<br/><span class="hl">JAW.id</span></h2>
-        <p>The one-tap Face ID account, the single signature behind every batch and the permissions the agents run under all run on JAW.id, identity-first smart accounts with passkey signers and programmable permissions. Your product can ship on it too.</p>
+        <h2><span class="hl">JAW.id</span> runs it<br/>end to end.</h2>
+        <p>Every account, signature and agent permission you just saw runs on JAW.id. Your product can too.</p>
         <div class="jh-ctas">
           <a class="btn btn-ink" href="https://jaw.id" target="_blank" rel="noopener">Build on JAW.id &rarr;</a>
           <a class="btn btn-ghost-dark" href="https://dashboard.jaw.id" target="_blank" rel="noopener">Open the dashboard</a>
@@ -1276,6 +1179,16 @@
         <div class="jh-tag">WEB2 SIMPLICITY · WEB3 SOVEREIGNTY</div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="fin">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="eyebrow lime">Live on Base</div>
+    <h2>Ready to get <span class="hl">greedy</span>?</h2>
+    <p>Sign up in seconds. No seed phrase, no app to install.</p>
+    <a class="btn btn-ink" href="https://app.greedygoo.com" target="_blank" rel="noopener">Let my money get greedy &rarr;</a>
   </div>
 </section>
 <footer>
@@ -1546,6 +1459,54 @@
     };
     document.querySelectorAll(".tapzone[data-page]").forEach((b) => b.addEventListener("click", () => show(b.dataset.page)));
     pages.forEach((p) => p.addEventListener("click", () => show(null)));
+  })();
+</script>
+
+<script>
+  // Live cash rate: Aave V3's USDC supply rate on Base, read on load. The figures in the page are the fallback.
+  (() => {
+    const els = document.querySelectorAll("[data-apy]");
+    if (!els.length) return;
+    const POOL = "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5";
+    const USDC = "833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
+    const data = "0x35ea6a75" + USDC.toLowerCase().padStart(64, "0");
+    const RPCS = ["https://mainnet.base.org", "https://base-rpc.publicnode.com", "https://base.llamarpc.com"];
+    const SPY = 31536000;
+    const apyFrom = (hex) => {
+      const w = hex.slice(2 + 64 * 2, 2 + 64 * 3);
+      if (w.length !== 64) return null;
+      const apr = Number(BigInt("0x" + w)) / 1e27;
+      const apy = Math.pow(1 + apr / SPY, SPY) - 1;
+      return apy > 0 && apy < 0.5 ? apy : null;
+    };
+    const read = async (url) => {
+      const c = new AbortController();
+      const t = setTimeout(() => c.abort(), 6000);
+      try {
+        const r = await fetch(url, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call", params: [{ to: POOL, data }, "latest"] }),
+          signal: c.signal,
+        });
+        const j = await r.json();
+        return j && j.result ? apyFrom(j.result) : null;
+      } finally {
+        clearTimeout(t);
+      }
+    };
+    (async () => {
+      for (const u of RPCS) {
+        try {
+          const apy = await read(u);
+          if (apy != null) {
+            const v = (apy * 100).toFixed(1);
+            els.forEach((e) => (e.textContent = v));
+            return;
+          }
+        } catch (e) {}
+      }
+    })();
   })();
 </script>
 
