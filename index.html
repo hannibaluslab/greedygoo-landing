@@ -999,7 +999,7 @@
     <div class="ag-head rv">
       <div class="eyebrow">Agents · on-chain</div>
       <h2>The agents work for you,<br/>only on what you <span class="hl">signed</span>.</h2>
-      <p class="lead">Four agents look after your money when you&rsquo;re not in the app. Each one runs on-chain through our GooseExecutor contract and can only do what your JAW.id permission allows, which automatically expires after a year.</p>
+      <p class="lead">Four agents look after your money when you&rsquo;re not in the app. Each one runs on-chain through our GooseGuard contract and can only do what your JAW.id permission allows, which automatically expires after a year.</p>
     </div>
 
     <div class="ag-cards">
@@ -1042,7 +1042,7 @@
             <button class="ptab" role="tab" aria-selected="false" data-p="entry" type="button">Entry</button>
           </div>
           <div class="perm-card">
-            <div class="pc-row"><span class="pc-k">Spender</span><span class="pc-v">GooseExecutor <em>our contract on Base</em></span></div>
+            <div class="pc-row"><span class="pc-k">Spender</span><span class="pc-v">GooseGuard <em>our contract on Base</em></span></div>
             <div class="pc-row top"><span class="pc-k">May call</span>
               <ul class="pc-calls on" data-p="protect"><li><b>Aave savings</b> · withdraw</li><li><b>USDC</b> · approve</li><li><b>Aave credit</b> · repay</li></ul>
               <ul class="pc-calls" data-p="sell"><li><b>Aave credit</b> · withdraw the stock that backs it</li><li><b>Each stock that backs credit</b> · approve</li><li><b>Aerodrome</b> · swap</li><li><b>USDC</b> · approve</li><li><b>Aave credit</b> · repay</li></ul>
@@ -1058,7 +1058,7 @@
         <div class="checks">
           <div class="ck-title">Before any call, JAW&rsquo;s manager checks</div>
           <ol class="ck">
-            <li><b>The right spender.</b> Only GooseExecutor can use it.</li>
+            <li><b>The right spender.</b> Only GooseGuard can use it.</li>
             <li><b>Still active.</b> You haven&rsquo;t turned it off.</li>
             <li><b>Inside its dates.</b> It has started and hasn&rsquo;t ended.</li>
             <li><b>Every call is on the list.</b> One call off the list and nothing runs.</li>
@@ -1066,7 +1066,7 @@
           <div class="ck-title">After the calls run</div>
           <ol class="ck after">
             <li><b>Approvals go back to zero.</b> JAW&rsquo;s manager resets every approval the move made.</li>
-            <li><b>GooseExecutor checks your pockets.</b> If money would end up anywhere but your own account, the whole move is undone.</li>
+            <li><b>GooseGuard checks your pockets.</b> If money would end up anywhere but your own account, the whole move is undone.</li>
           </ol>
         </div>
       </div>
@@ -1078,10 +1078,10 @@
         <h3>See how each round runs.</h3>
       </div>
       <ol class="round">
-        <li><span class="r-n">01</span><b>GooseExecutor wakes up.</b><span>A runner with no money or permission wakes it up.</span></li>
+        <li><span class="r-n">01</span><b>GooseGuard wakes up.</b><span>A runner with no money or permission wakes it up.</span></li>
         <li><span class="r-n">02</span><b>Each account gets a plan.</b><span>Protect always goes first, and one account failing never stops the others.</span></li>
         <li><span class="r-n">03</span><b>JAW checks, then runs.</b><span>Only moves your permission allows get through.</span></li>
-        <li><span class="r-n">04</span><b>GooseExecutor rechecks.</b><span>Money stays in your own pockets, or the move is undone.</span></li>
+        <li><span class="r-n">04</span><b>GooseGuard rechecks.</b><span>Money stays in your own pockets, or the move is undone.</span></li>
       </ol>
     </div>
   </div>
